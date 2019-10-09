@@ -3,11 +3,10 @@ public/uploads/*
 # Ignore bundler config.
 /.bundle
 
-# Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+
+log/
+tmp/
+tmp/cache/
 
 # Ignore uploaded files in development
 /storage/*
