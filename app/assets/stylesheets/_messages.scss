@@ -1,0 +1,259 @@
+@mixin chat_text_title{
+    font-size: 16px;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: bold;
+
+}
+@mixin chat_text_time{
+    font-size: 10px;
+    display:inline-block;
+    margin:0;
+    height:12px;
+}
+@mixin chat_text_text{
+    margin:0;
+    font-size: 14px;
+}
+
+@mixin sidebar_bottom_content{
+  height:66px;
+  width:100%;
+  margin-bottom: 40px;
+}
+
+@mixin sidebar_bottom_title{
+  margin-top:0;
+  margin-bottom:5px;
+  font-weight:bold;
+  font-size: 15px;
+}
+
+@mixin sidebar_bottom_text{
+    font-size:11px;
+    margin:0;
+    padding:0;
+}
+
+$index_blue_color:#38AEF0;
+$index_deep_blue:#253141;
+
+.header{
+  height:30px;
+  background:$index_blue_color;
+  width:100%;
+  text-align: center;
+  position:fixed;
+  margin:0;
+  padding:0;
+  top:0;
+}
+.contents{
+  height:100%;
+  width:100%;
+  padding-top: 30px;
+  &__sidebar{
+    background: #2f3e51;
+    height:calc(100vh - 30px);
+    width:300px;
+    float:left;
+    color:#ffffff;
+    &__title{
+      height:47px;
+      width:260px;
+      margin:0;
+      color:#ffffff;
+      font-weight: bold;
+      font-size: 16px;
+      background: $index_deep_blue;
+      padding:35px 20px 0px 20px;
+      &__box{
+        margin:0;
+        position:relative;
+        p{
+          margin:0;
+          padding:0;
+          display: inline-block;
+        }
+        &__btn{
+          display:inline-block;
+          height:18px;
+          width:18px;
+          background: $index_deep_blue;
+          position: absolute;
+          left:230px;
+          top:67px;
+          color:white;
+
+          &__icon{
+            margin:0;
+          }
+          &--edit{
+            position: absolute;
+            left:230px;
+            display: inline-block;
+          }
+          &--cog{
+            position: absolute;
+            left:250px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &__bottom{
+    padding:20px 40px 0px 20px;
+      &__1{
+         @include sidebar_bottom_content;
+        &__title{
+         @include sidebar_bottom_title;
+        }
+        &__text{
+         @include sidebar_bottom_text;
+        }
+      }
+      &__2{
+        @include sidebar_bottom_content;
+        &__title{
+          @include sidebar_bottom_title;
+        }
+        &__text{
+          @include sidebar_bottom_text;
+        }
+      }
+    }
+  }
+  &__chat{
+    height:100%;
+    width:calc(100vw - 300px);
+    float:right;
+    background:#fafafa;
+    font-family: sans-serif;
+    &__title{
+      height:82px;
+      border-bottom: solid 1px #eeeeee;
+      display:flex;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: relative;
+
+      &__box{
+        margin-top: 35px;
+
+        &__title{
+          margin-top:0;
+          p{
+            font-size:18px;
+            margin-bottom: 15px;
+            color:#333333;
+            height:20px;
+          }
+          ul{
+            padding:0;
+            margin:0;
+            font-size: 9px;
+            color:#999999;
+            height:12px;
+          }
+          ul li{
+            display:inline-block;
+            height:12px;
+            }
+          }
+      }
+      &__editbtn{
+        height:40px;
+        border:solid 1px $index_blue_color;
+        color:$index_blue_color;
+        padding-left:20px;
+        padding-right:20px;
+        line-height: 40px;
+        position:absolute;
+        right:40px;
+        top:58px;
+      }
+    }
+    &__box{
+      padding:46px 40px 46px 40px;
+      margin:0;
+      height:calc(100vh - 285px);
+      &__1{
+        padding-bottom: 40px;
+        &__title{
+          @include chat_text_title;
+        }
+        &__time{
+          @include chat_text_time;
+        }
+        &__text{
+          @include chat_text_text;
+        }
+      }
+      &__2{
+        padding-bottom: 40px;
+        &__title{
+          @include chat_text_title;
+        }
+        &__time{
+          @include chat_text_time;
+        }
+        &__text{
+          @include chat_text_text;
+        }
+      }
+    }
+    &__footer{
+       background:#c0c0c0;
+       height:80px;
+       padding-left: 40px;
+       padding-right: 40px;
+       display:flex;
+       margin:0;
+       box-sizing: border-box;
+      &__form{
+        display:flex;
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        width:100%;
+        position: relative;
+        input{
+          height:50px;
+          width:100%;
+          margin:15px 10px 0 10px;
+          padding:0;
+          line-height: 50px;
+          display:inline-block;
+        }
+        input.image{
+          display:none;
+        }
+        &__image{
+          display:inline-block;
+          height:30px;
+          width:30px;
+          position: absolute;
+          right:130px;
+          bottom:20px;
+          color:black;
+        }
+        &__sendbtn{
+          border:solid 1px $index_blue_color;
+          width :100px;
+          height:50px;
+          color:$index_blue_color;
+          line-height: 50px;
+          text-align: center;
+          display:inline-block;
+          margin-left: 15px;
+          margin-top: 15px;
+        }
+      }
+    }
+
+  }
+
+}
