@@ -438,3 +438,235 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 1236ms (Views: 1223.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-10-10 18:33:28 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8445024276154775190', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20191010081519)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8445024276154775190')[0m
+Started GET "/" for ::1 at 2019-10-10 18:37:33 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_nortifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/yusuke/project/chat-space/app/views"
+):
+     7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+     9:   %body
+    10:     = render 'layouts/nortifications'
+    11:     = yield
+  
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140739953460'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.2ms)
+Started GET "/" for ::1 at 2019-10-10 18:39:04 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial messages/_nortifications, application/_nortifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/yusuke/project/chat-space/app/views"
+):
+     7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+     9:   %body
+    10:     = render 'nortifications'
+    11:     = yield
+  
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140796586700'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (114.6ms)
+Started GET "/" for ::1 at 2019-10-10 18:39:19 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial messages/_notifications, application/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/yusuke/project/chat-space/app/views"
+):
+     7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+     9:   %body
+    10:     = render 'notifications'
+    11:     = yield
+  
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140758728980'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.2ms)
+Started GET "/" for ::1 at 2019-10-10 18:39:55 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_nortifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/yusuke/project/chat-space/app/views"
+):
+     7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+     9:   %body
+    10:     = render 'layout/nortifications'
+    11:     = yield
+  
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140796884540'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (124.1ms)
+Started GET "/" for ::1 at 2019-10-10 18:42:51 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 548ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial messages/_notifications, application/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/yusuke/project/chat-space/app/views"
+):
+     7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+     9:   %body
+    10:     = render 'notifications'
+    11:     = yield
+  
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140737086320'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.8ms)
+Started GET "/" for ::1 at 2019-10-10 18:43:42 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial messages/_notifications, application/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/yusuke/project/chat-space/app/views"
+):
+     7:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+     8:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+     9:   %body
+    10:     = render 'notifications'
+    11:     = yield
+  
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140762910420'
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.6ms)
+Started GET "/" for ::1 at 2019-10-10 18:44:36 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (16.8ms)
+  Rendered layouts/_notifications.html.haml (1.8ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 18:46:46 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (12.0ms)
+  Rendered layouts/_notifications.html.haml (1.7ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
