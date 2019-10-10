@@ -3,14 +3,14 @@ Processing by MessagesController#index as HTML
 Completed 406 Not Acceptable in 95ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (MessagesController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.7.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -96,14 +96,14 @@ Processing by MessagesController#index as HTML
 Completed 406 Not Acceptable in 80ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (MessagesController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.7.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -185,18 +185,18 @@ puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
   Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
   Rendered /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.4ms)
 Started GET "/" for ::1 at 2019-10-07 13:41:34 +0900
-  
+
 Started GET "/" for ::1 at 2019-10-07 13:41:44 +0900
 SyntaxError (/Users/yusuke/project/chat-space/config/routes.rb:4: syntax error, unexpected ':', expecting keyword_end
 root to : 'messages#index'
         ^
 /Users/yusuke/project/chat-space/config/routes.rb:7: syntax error, unexpected keyword_end, expecting end-of-input):
-  
-  
+
+
 config/routes.rb:4: syntax error, unexpected ':', expecting keyword_end
 config/routes.rb:7: syntax error, unexpected keyword_end, expecting end-of-input
 ActionController::RoutingError (No route matches [GET] "/"):
-  
+
 actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -243,14 +243,14 @@ Processing by MessagesController#index as HTML
 Completed 406 Not Acceptable in 85ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (MessagesController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.7.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -336,14 +336,14 @@ Processing by MessagesController#index as HTML
 Completed 406 Not Acceptable in 82ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (MessagesController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.7.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -440,7 +440,7 @@ Completed 200 OK in 1236ms (Views: 1223.4ms | ActiveRecord: 0.0ms)
 
 Started GET "/" for ::1 at 2019-10-10 18:33:28 +0900
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -448,7 +448,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.7.2) lib/active_record/migration.rb:573:in `check_pending!'
 activerecord (5.0.7.2) lib/active_record/migration.rb:549:in `call'
 actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -505,7 +505,7 @@ Processing by MessagesController#index as HTML
 Completed 500 Internal Server Error in 274ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial layouts/_nortifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
   * "/Users/yusuke/project/chat-space/app/views"
 ):
@@ -514,7 +514,7 @@ ActionView::Template::Error (Missing partial layouts/_nortifications with {:loca
      9:   %body
     10:     = render 'layouts/nortifications'
     11:     = yield
-  
+
 app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140739953460'
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -531,7 +531,7 @@ Processing by MessagesController#index as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial messages/_nortifications, application/_nortifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
   * "/Users/yusuke/project/chat-space/app/views"
 ):
@@ -540,7 +540,7 @@ ActionView::Template::Error (Missing partial messages/_nortifications, applicati
      9:   %body
     10:     = render 'nortifications'
     11:     = yield
-  
+
 app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140796586700'
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -557,7 +557,7 @@ Processing by MessagesController#index as HTML
 Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial messages/_notifications, application/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
   * "/Users/yusuke/project/chat-space/app/views"
 ):
@@ -566,7 +566,7 @@ ActionView::Template::Error (Missing partial messages/_notifications, applicatio
      9:   %body
     10:     = render 'notifications'
     11:     = yield
-  
+
 app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140758728980'
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -583,7 +583,7 @@ Processing by MessagesController#index as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial layout/_nortifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
   * "/Users/yusuke/project/chat-space/app/views"
 ):
@@ -592,7 +592,7 @@ ActionView::Template::Error (Missing partial layout/_nortifications with {:local
      9:   %body
     10:     = render 'layout/nortifications'
     11:     = yield
-  
+
 app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140796884540'
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -609,7 +609,7 @@ Processing by MessagesController#index as HTML
 Completed 500 Internal Server Error in 548ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial messages/_notifications, application/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
   * "/Users/yusuke/project/chat-space/app/views"
 ):
@@ -618,7 +618,7 @@ ActionView::Template::Error (Missing partial messages/_notifications, applicatio
      9:   %body
     10:     = render 'notifications'
     11:     = yield
-  
+
 app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140737086320'
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -635,7 +635,7 @@ Processing by MessagesController#index as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial messages/_notifications, application/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
   * "/Users/yusuke/project/chat-space/app/views"
 ):
@@ -644,7 +644,7 @@ ActionView::Template::Error (Missing partial messages/_notifications, applicatio
      9:   %body
     10:     = render 'notifications'
     11:     = yield
-  
+
 app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___3510898577322022403_70140762910420'
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/yusuke/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -668,5 +668,3 @@ Processing by MessagesController#index as HTML
   Rendered messages/index.html.haml within layouts/application (12.0ms)
   Rendered layouts/_notifications.html.haml (1.7ms)
 Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
-
-
