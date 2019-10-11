@@ -64,7 +64,7 @@ end
 
 group :test do
 
-  gem 'faker' , '1.2.0'
+  gem 'faker' 
 
 end
 
