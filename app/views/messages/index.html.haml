@@ -6,7 +6,7 @@
       .contents__sidebar__title__box
         %p
         test_test
-    =link_to "https://www.com/", class: "contents__sidebar__title__box__btn contents__sidebar__title__box__btn--edit" do
+    =link_to edit_user_path(current_user), class: "contents__sidebar__title__box__btn contents__sidebar__title__box__btn--edit" do
       = fa_icon 'edit'
     =link_to "https://www.com/", class: "contents__sidebar__title__box__btn contents__sidebar__title__box__btn--cog" do
       = fa_icon 'cog'
