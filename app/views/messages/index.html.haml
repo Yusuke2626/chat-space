@@ -34,13 +34,14 @@
     .contents__chat__title__editbtn
       EDIT
     .contents__chat__box
-      .contents__chat__box__1
-        .contents__chat__box__1__title
-          test_title
-        .contents__chat__box__1__time
-          2019/10/01(fri) 10:10:00
-        .contents__chat__box__1__text
-          Hello_sample
+      = render @messages
+      -# .contents__chat__box__1
+      -#   .contents__chat__box__1__title
+      -#     = render partial: 'message', collection: @messages
+      -#   .contents__chat__box__1__time
+      -#     2019/10/01(fri) 10:10:00
+      -#   .contents__chat__box__1__text
+      -#     aaaa
       .contents__chat__box__2
         .contents__chat__box__2__title
           test_title
@@ -50,13 +51,22 @@
           good_sample
     .contents__chat__footer
       .contents__chat__footer__form
-        %input{:name => "title",:placeholder => "type a message", :size => "40",:class =>"text"}
+        .form
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__mask
+              = f.label :image, class: 'form__mask__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'
 
-        %form{:action => "/", :method => "post"}
-        %label.upload-label{for: "upload-icon"}
-          = fa_icon 'image' ,class:"contents__chat__footer__form__image"
-          %input{:type => "file", :name => "image",:id => "upload-icon",:class => "image"}
-
+          -# %input{:name => "title",:placeholder => "type a message", :size => "40",:class =>"text"}
+          -#
+          -# %form{:action => "/", :method => "post"}
+          -# %label.upload-label{for: "upload-icon"}
+          -#   = fa_icon 'image' ,class:"contents__chat__footer__form__image"
+          -#   %input{:type => "file", :name => "image",:id => "upload-icon",:class => "image"}
+          -#
 
         .contents__chat__footer__form__sendbtn
           send
