@@ -1,17 +1,10 @@
 class GroupsController < ApplicationController
     before_action :set_group, only: [:edit,:update]
 
-<<<<<<< Updated upstream
-  
-
-  def index
-  end
-=======
 
 
    def edit
    end
->>>>>>> Stashed changes
 
    def update
     if @group.update(group_params)
@@ -21,15 +14,9 @@ class GroupsController < ApplicationController
     end
    end
 
-<<<<<<< Updated upstream
-  def new
-     @group = Group.new
-     @group.users << current_user
-=======
    def new
        @group = Group.new
        @group.users << current_user
->>>>>>> Stashed changes
    end
 
    def create
@@ -50,9 +37,5 @@ class GroupsController < ApplicationController
      @group = Group.find(params[:id])
    end
 
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 end
