@@ -9,6 +9,10 @@ class UsersController < ApplicationController
     else
         render :edit
     end
+<<<<<<< Updated upstream
+=======
+  end
+>>>>>>> Stashed changes
 
    private
   def user_params
