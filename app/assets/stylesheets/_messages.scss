@@ -40,27 +40,19 @@
 $index_blue_color:#38AEF0;
 $index_deep_blue:#253141;
 
-.header{
-  height:30px;
-  background:$index_blue_color;
-  width:100%;
-  text-align: center;
-  position:fixed;
-  margin:0;
-  padding:0;
-  top:0;
-}
 .contents{
   height:100%;
   width:100%;
-  padding-top: 30px;
-  &__sidebar{
+  padding-top: 0px;
+  text-decoration: none;
+  .sidebar{
     background: #2f3e51;
-    height:calc(100vh - 30px);
+    height:calc(100vh);
     width:300px;
     float:left;
     color:#ffffff;
-    &__title{
+    text-decoration: none;
+    .title{
       height:47px;
       width:260px;
       margin:0;
@@ -69,6 +61,7 @@ $index_deep_blue:#253141;
       font-size: 16px;
       background: $index_deep_blue;
       padding:35px 20px 0px 20px;
+      text-decoration: none;
       &__box{
         margin:0;
         position:relative;
@@ -77,72 +70,77 @@ $index_deep_blue:#253141;
           padding:0;
           display: inline-block;
         }
-        &__btn{
+        .edit{
           display:inline-block;
           height:18px;
           width:18px;
           background: $index_deep_blue;
           position: absolute;
-          left:230px;
-          top:67px;
+          left:220px;
           color:white;
-
-          &__icon{
-            margin:0;
-          }
-          &--edit{
-            position: absolute;
-            left:230px;
-            display: inline-block;
-          }
-          &--cog{
-            position: absolute;
-            left:250px;
-            display: inline-block;
-          }
+        }
+        .cog{
+          display:inline-block;
+          height:18px;
+          width:18px;
+          background: $index_deep_blue;
+          position: absolute;
+          left:240px;
+          color:white;
+        }  // &__icon{
+          //   margin:0;
+          // }
+          // &--edit{
+          //   position: absolute;
+          //   left:230px;
+          //   display: inline-block;
+          // }
+          // &--cog{
+          //   position: absolute;
+          //   left:250px;
+          //   display: inline-block;
+          // }
         }
       }
     }
 
-    &__bottom{
+    .bottom{
     padding:20px 40px 0px 20px;
-      &__1{
+      .one{
          @include sidebar_bottom_content;
+        .side{
+           text-decoration: none;
+           text-decoration-style: none;
+           color:white;
+         }
         &__title{
          @include sidebar_bottom_title;
+         text-decoration: none;
+
         }
         &__text{
          @include sidebar_bottom_text;
-        }
-      }
-      &__2{
-        @include sidebar_bottom_content;
-        &__title{
-          @include sidebar_bottom_title;
-        }
-        &__text{
-          @include sidebar_bottom_text;
+         text-decoration: none;
         }
       }
     }
-  }
-  &__chat{
+
+  .chat{
     height:100%;
     width:calc(100vw - 300px);
     float:right;
     background:#fafafa;
     font-family: sans-serif;
-    &__title{
+    .title{
       height:82px;
       border-bottom: solid 1px #eeeeee;
       display:flex;
       padding-left: 40px;
       padding-right: 40px;
       position: relative;
-
-      &__box{
+      .box{
         margin-top: 35px;
-
+        width:300px;
         &__title{
           margin-top:0;
           p{
@@ -157,14 +155,17 @@ $index_deep_blue:#253141;
             font-size: 9px;
             color:#999999;
             height:12px;
-          }
-          ul li{
+            list-style: none;
+
+            li{
             display:inline-block;
+            list-style: none;
             height:12px;
             }
           }
+        }
       }
-      &__editbtn{
+      .editbtn{
         height:40px;
         border:solid 1px $index_blue_color;
         color:$index_blue_color;
@@ -173,26 +174,15 @@ $index_deep_blue:#253141;
         line-height: 40px;
         position:absolute;
         right:40px;
-        top:58px;
+        top:28px;
+        text-decoration: none;
       }
     }
-    &__box{
+    .box1{
       padding:46px 40px 46px 40px;
       margin:0;
-      height:calc(100vh - 285px);
-      &__1{
-        padding-bottom: 40px;
-        &__title{
-          @include chat_text_title;
-        }
-        &__time{
-          @include chat_text_time;
-        }
-        &__text{
-          @include chat_text_text;
-        }
-      }
-      &__2{
+      height:calc(100vh - 255px);
+      .one{
         padding-bottom: 40px;
         &__title{
           @include chat_text_title;
@@ -205,7 +195,7 @@ $index_deep_blue:#253141;
         }
       }
     }
-    &__footer{
+    .footer{
        background:#c0c0c0;
        height:80px;
        padding-left: 40px;
@@ -213,44 +203,56 @@ $index_deep_blue:#253141;
        display:flex;
        margin:0;
        box-sizing: border-box;
-      &__form{
+      .form{
         display:flex;
         margin:0;
         padding:0;
         box-sizing: border-box;
         width:100%;
-        position: relative;
-        input{
-          height:50px;
+        #new_message{
+          height:30px;
+        }
+
+        .input{
           width:100%;
+          position: relative;
+        &--message{
+          height:50px;
+          width:80%;
           margin:15px 10px 0 10px;
           padding:0;
           line-height: 50px;
-          display:inline-block;
+         }
         }
-        input.image{
-          display:none;
-        }
-        &__image{
-          display:inline-block;
-          height:30px;
-          width:30px;
-          position: absolute;
-          right:130px;
-          bottom:20px;
-          color:black;
-        }
-        &__sendbtn{
-          border:solid 1px $index_blue_color;
-          width :100px;
-          height:50px;
-          color:$index_blue_color;
-          line-height: 50px;
-          text-align: center;
-          display:inline-block;
-          margin-left: 15px;
-          margin-top: 15px;
-        }
+          .mask{
+              display:inline-block;
+              height:30px;
+              width:30px;
+              position: absolute;
+              right:130px;
+              bottom:20px;
+              color:black;
+            }
+            .hidden{
+              display: none;
+            }
+
+            .sendbtn{
+            border:solid 1px $index_blue_color;
+            width :100px;
+            height:50px;
+            color:white;
+            background: #c0c0c0;
+            line-height: 50px;
+            text-align: center;
+            display:inline-block;
+            margin-left: 15px;
+            margin-top: 15px;
+            position: absolute;
+            right:0px;
+            bottom:15px;
+            color:black;
+          }
       }
     }
 
