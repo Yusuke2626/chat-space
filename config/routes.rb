@@ -4,12 +4,9 @@ Rails.application.routes.draw do
 
   root 'groups#index'
 
-<<<<<<< Updated upstream
-=======
-  resources  :users, only: [:edit,:update]
+  resources  :users, only: [:edit,:index,:update]
   resources  :groups, only: [:create,:edit,:update,:new] do
     resources :messages, only: [:index,:create]
   end
->>>>>>> Stashed changes
 
 end
