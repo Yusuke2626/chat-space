@@ -1,67 +1,57 @@
-.header
-  sample_グループを作成しました
 .contents
-  .contents__sidebar
-    .contents__sidebar__title
-      .contents__sidebar__title__box
+  .sidebar
+    .title
+      .title__box
         %p
-        test_test
-    =link_to "https://www.com/", class: "contents__sidebar__title__box__btn contents__sidebar__title__box__btn--edit" do
-      = fa_icon 'edit'
-    =link_to "https://www.com/", class: "contents__sidebar__title__box__btn contents__sidebar__title__box__btn--cog" do
-      = fa_icon 'cog'
-    .contents__sidebar__bottom
-      .contents__sidebar__bottom__1
-        .contents__sidebar__bottom__1__title
-          sample
-        .contents__sidebar__bottom__1__text
-          sample_text
-      .contents__sidebar__bottom__2
-        .contents__sidebar__bottom__2__title
-          sample2
-        .contents__sidebar__bottom__2__text
-          sample_text2
-  .contents__chat
-    .contents__chat__title
-      .contents__chat__title__box
-        .contents__chat__title__box__title
-          %p sample_title
+        =current_user.name
+        =link_to new_group_path, class: "edit" do
+          = fa_icon 'edit'
+        =link_to edit_user_path(current_user), class: "cog" do
+          = fa_icon 'cog'
+    .bottom
+      -current_user.groups.each do |group|
+        .one
+          = link_to group_messages_path(group),class:"side",style:'text-decoration:none' do
+            .one__title
+              =group.name
+            .one__text
+              nono
+  .chat
+    .title
+      .box
+        .box__title
+          %p=@group.name
           %ul
-            %li<
-              sample
-            %li<
-              test
-    .contents__chat__title__editbtn
-      EDIT
-    .contents__chat__box
-      .contents__chat__box__1
-        .contents__chat__box__1__title
-          test_title
-        .contents__chat__box__1__time
-          2019/10/01(fri) 10:10:00
-        .contents__chat__box__1__text
-          Hello_sample
-      .contents__chat__box__2
-        .contents__chat__box__2__title
-          test_title
-        .contents__chat__box__2__time
-          2019/10/01(fri) 10:10:02
-        .contents__chat__box__2__text
-          good_sample
-    .contents__chat__footer
-      .contents__chat__footer__form
-        %input{:name => "title",:placeholder => "type a message", :size => "40",:class =>"text"}
+            -@group.users.each do|user|
+              %li<
+                =user.name
+      .editbtn
+        = link_to  'edit' , 'edit'
+    .box1
+      = render @messages
+      -# .contents__chat__box__1
+      -#   .contents__chat__box__1__title
+      -#     = render partial: 'message', collection: @messages
+      -#   .contents__chat__box__1__time
+      -#     2019/10/01(fri) 10:10:00
+      -#   .contents__chat__box__1__text
+      -#     aaaa
 
-        %form{:action => "/", :method => "post"}
-        %label.upload-label{for: "upload-icon"}
-          = fa_icon 'image' ,class:"contents__chat__footer__form__image"
-          %input{:type => "file", :name => "image",:id => "upload-icon",:class => "image"}
+    .footer
+      .form
+        .input
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'input--message', placeholder: 'type a message'
+            .mask
+              = f.label :image, class: 'form__input__mask--image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'sendbtn',style:'color:#38AEF0'
 
-
-
-
-
-
-
-        .contents__chat__footer__form__sendbtn
-          send
+          -# %input{:name => "title",:placeholder => "type a message", :size => "40",:class =>"text"}
+          -#
+          -# %form{:action => "/", :method => "post"}
+          -# %label.upload-label{for: "upload-icon"}
+          -#   = fa_icon 'image' ,class:"contents__chat__footer__form__image"
+          -#   %input{:type => "file", :name => "image",:id => "upload-icon",:class => "image"}
+          -#
