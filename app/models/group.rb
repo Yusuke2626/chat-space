@@ -7,7 +7,11 @@ class Group < ApplicationRecord
   validates :name, presence: true
 
 
+<<<<<<< Updated upstream
   def sow_last_message
+=======
+  def show_last_message
+>>>>>>> Stashed changes
     if (last_message = messages.last).present?
       last_message.content? ? last_message.content : '画像が投稿されています'
     else
