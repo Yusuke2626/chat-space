@@ -43,6 +43,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'rails-i18n'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -51,6 +53,10 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'faker'
 
+end
+
+group :test, :development do
+  gem 'capybara'
 end
 
 

@@ -1,6 +1,13 @@
 ja:
   activerecord:
+    # .errors.models.message.attributes.content.blank
+
     errors:
+      models:
+        message:
+          attributes:
+            content:
+              blank: '入力'
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
         restrict_dependent_destroy:
@@ -109,7 +116,7 @@ ja:
     format: "%{attribute}%{message}"
     messages:
       accepted: を受諾してください
-      blank: を入力してください
+      blank: を入力
       confirmation: と%{attribute}の入力が一致しません
       empty: を入力してください
       equal_to: は%{count}にしてください
