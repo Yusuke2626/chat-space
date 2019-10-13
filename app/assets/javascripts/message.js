@@ -7,12 +7,23 @@ $(function(){
                   <div class="one_time">
                   ${message.created_at}
                   </div>
-                  <div class="one-text">
-                    <p class="lower-message_content">
-                    ${message.content}
-                    </p>
+                  <div class="one_text">
+                  <p class="lower-message_content">
+                  ${message.content}
+                  </p>
+                  `
+
+                if(message.image_url==null){
+                html = $(html).append(
+                  `</div>
+                  </div>`)
+                }else{
+                  html = $(html).append(
+                  `<img src= "${message.image_url}">
                   </div>
                 </div>`
+                )}
+
     return html;
   }
 
@@ -33,6 +44,13 @@ $(function(){
       var html = buildHTML(data);
       $('.box1').append(html)
       $('.input--message').val('')
+      $('.hidden').val('')
+      $('.sendbtn').attr('disabled', false);
+      $('.box1').animate({
+          scrollTop: $('.box1')[0].scrollHeight},1000);
+    })
+    .fail(function(){
+      alert('エラー');
       $('.sendbtn').attr('disabled', false);
     })
   })
