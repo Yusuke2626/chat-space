@@ -43,8 +43,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.box1').append(html)
-      $('.input--message').val('')
-      $('.hidden').val('')
+      $('#new_message')[0].reset();
       $('.sendbtn').attr('disabled', false);
       $('.box1').animate({
           scrollTop: $('.box1')[0].scrollHeight},1000);
