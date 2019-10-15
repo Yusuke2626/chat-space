@@ -28,7 +28,6 @@ $(function(){
       $('input[name="group[user_ids][]"]').each(function(){
         var user_id = $(this).attr('value');
         user_ids.push(user_id);
-        console.log('ppp')
       });
       return user_ids;
     }
@@ -43,7 +42,6 @@ $(function(){
     });
 
     $(".chat-group-users").on('click','.user-search-remove',function(){
-      console.log('lllll');
       var userlist = $(this).parent()
         userlist.remove();
     })
@@ -51,7 +49,6 @@ $(function(){
     $("#user-search-field").on("keyup", function() {
         var input = $("#user-search-field").val();
         var href = window.location.href
-        console.log(input);
         var user_ids = [];
         addUser_id(user_ids);
 
