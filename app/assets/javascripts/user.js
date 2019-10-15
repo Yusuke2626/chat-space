@@ -33,11 +33,10 @@ $(function(){
     }
 
     $('.user-search-result').on('click','.user-search-add',function(){
-      console.log('heelooo');
        var userlist = $(this).parent()
          userlist.remove();
-       var user_id = $(this).attr('data-user-id');
-       var user_name = $(this).attr('data-user-name');
+       var user_id = $(this).data('user-id');
+       var user_name = $(this).data('user-name');
          chataddUser(user_name,user_id);
     });
 
@@ -69,6 +68,9 @@ $(function(){
           else{
            alert('no-user');
           }
+        });
+        .fail(function(){
+          alert('error');
         });
     });
 });
