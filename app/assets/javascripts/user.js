@@ -70,7 +70,7 @@ $(function(){
             });
           }
           else{
-           alert('error');
+           alert('no-user');
           }
         });
     });
