@@ -2,7 +2,6 @@ $(function(){
 
 
   function buildHTML(message){
-
     var html =   `<div class="one" id="message" data-id="${message.id}" >
                   <div class="one_title">
                   ${message.user_name}
@@ -16,13 +15,13 @@ $(function(){
                   </p>
                   `
 
-                if(message.image_url==null){
+                if(message.image.url== null){
                 html = $(html).append(
                   `</div>
                   </div>`)
                 }else{
                   html = $(html).append(
-                  `<img src= "${message.image_url}">
+                  `<img src= "${message.image.url}">
                   </div>
                 </div>`
                 )}
@@ -87,7 +86,7 @@ $(function(){
          console.log(message);
       var html = buildHTML(message);
          insertHTML = html
-         console.log(html);
+         console.log(insertHTML);
 
       })
         $('.box1').append(insertHTML);
