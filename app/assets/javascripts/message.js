@@ -1,6 +1,5 @@
 $(function(){
 
-
   function buildHTML(message){
     var html =   `<div class="one" id="message" data-id="${message.id}" >
                   <div class="one_title">
@@ -70,7 +69,7 @@ $(function(){
     var message_ids = [];
     var message_ids = add_message_id(message_ids);
     var last_message_id = message_ids[message_ids.length-1];
-    console.log(last_message_id);
+
 
     $.ajax({
       url:'api/messages#index {:format=>"json"}',
@@ -79,15 +78,10 @@ $(function(){
       data:{ id:last_message_id }
     })
     .done(function(messages){
-        console.log('ok');
       var insertHTML = '';
-        console.log(messages);
        messages.forEach(function(message){
-         console.log(message);
       var html = buildHTML(message);
          insertHTML = html
-         console.log(insertHTML);
-
       })
         $('.box1').append(insertHTML);
         $('.box1').animate({
