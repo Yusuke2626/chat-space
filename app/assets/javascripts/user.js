@@ -68,7 +68,7 @@ $(function(){
           else{
            alert('no-user');
           }
-        });
+        })
         .fail(function(){
           alert('error');
         });
