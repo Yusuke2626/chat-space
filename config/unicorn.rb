@@ -1,4 +1,4 @@
-app_path = File.expand_path('../../',__FILE__)
+app_path = File.expand_path('../../', __FILE__)
 
 worker_processes 1
 
@@ -8,7 +8,7 @@ pid "#{app_path}/tmp/pids/unicorn.pid"
 
 listen 3000
 
-stderr_path "app_path/log/unicorn.stderr.log"
+stderr_path "#{app_path}/log/unicorn.stderr.log"
 
 stdout_path "#{app_path}/log/unicorn.stdout.log"
 
