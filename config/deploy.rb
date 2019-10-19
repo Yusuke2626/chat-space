@@ -13,7 +13,7 @@ set :rbenv_ruby, '2.5.1'
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 set :ssh_options, auth_methods: ['publickey'],
-                  keys:['yuoi']
+                  keys:['~/.ssh/yuoi.pem']
 set :unicorn_pid, ->{"#{shared_path}/tmp/pids/unicorn.pid"}
 
 set :unicorn_config_path, -> {"#{current_path}/config/unicorn.rb"}
