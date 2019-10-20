@@ -41,10 +41,10 @@ server '54.64.166.153', user: 'ec2-user', roles: %w{app db web}
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
+ set :ssh_options, {
+   keys: %w(~/.ssh/id_rsa),
+   forward_agent: true,
+   auth_methods: %w(password)
 #  }
 #
 # The server-based syntax can be used to override options:
