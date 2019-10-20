@@ -45,7 +45,7 @@ server '54.64.166.153', user: 'ec2-user', roles: %w{app db web}
    keys: %w(~/.ssh/id_rsa),
    forward_agent: true,
    auth_methods: %w(password)
-#  }
+ }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
